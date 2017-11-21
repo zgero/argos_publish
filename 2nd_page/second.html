@@ -5,30 +5,45 @@
 <title>Main</title>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" />
 <link rel="stylesheet" type="text/css" href="./common.css" />
-<link rel="stylesheet" type="text/css" href="./css/pikabay.css" />
 
 </head>
 
 <body>
+	<div id="popup">
+		<div class="exit"></div>
+		<div class="popup">
+			<div class="pop_title"><span>Video의 메타데이터 수정</span></div>
+			<div class="datepick">
+				<div>일시</div>
+				<input type="text" id="datetimepicker" placeholder="일시를 입력하세요">
+			</div>
+			<div class="datepick">
+				<div>위치</div>
+				<input type="list" id="autocomplete" placeholder="위치를 검색하세요">
+			</div>
+			<div class="map"></div>
+		</div>
+		<div class="button"><div>취소</div><div>적용</div></div>
+	</div>
 	<div id="upload">
 		<button id="fi" class="header colorh">파일 업로드</button>
 		<div class="do">
-			<div class="select"><span>video video</span><br/><span>Running Time / Metadata</span></div>
-			<div class=""><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class=""><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class=""><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class=""><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>
-			<div class="deact"><span>video video</span><span>Running Time / Metadata</span></div>	
+			<div class="select"><span>video video</span><br/><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="have-select"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class=""><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class=""><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class=""><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>
+			<div class="deact"><span>video video</span><span>지도 및 시간 정보 입력을 위해 더블클릭해주세요</span></div>	
 			<button class="waiting bottom_button">현재 분석 진행률 - 5 / 32</button>
 		</div>
 	</div>
-	<div id="third">
+	<!--<div id="third">
 		<div class="title"> <span>Video Name의 날짜 / 지도 데이터</span></div>
 		<div class="datepick">
 			<div>일시</div>
@@ -38,12 +53,13 @@
 			<div>위치</div>
 			<input type="search" id="mappicker" placeholder="위치를 검색하세요">	
 		</div>
-		<div class="button"> <button class="save">저장하기</button> <button class="save">재설정하기</button></div>
-	</div>
+		<button id=""></button>
+
+	</div>-->
 	<div id="list">
 		<div class="title2">시간 설정 그래프</div>
 		<ul>
-			<li><div><span>출현 시간</span></div></li>
+			<li><div class="select"><span>출현 시간</span></div></li>
 			<li><div><span>출현 시간</span></div></li>
 			<li><div><span>출현 시간</span></div></li>
 			<li><div><span>출현 시간</span></div></li>

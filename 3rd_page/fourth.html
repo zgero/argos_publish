@@ -9,6 +9,22 @@
 </head>
 
 <body>
+	<div id="popup">
+		<div class="exit"></div>
+		<div class="popup">
+			<div class="pop_title"><span>Video의 메타데이터 수정</span></div>
+			<div class="datepick">
+				<div>일시</div>
+				<input type="text" id="datetimepicker" placeholder="일시를 입력하세요">
+			</div>
+			<div class="datepick">
+				<div>위치</div>
+				<input type="list" id="autocomplete" placeholder="위치를 검색하세요">
+			</div>
+			<div class="map"></div>
+		</div>
+		<div class="button"><div>취소</div><div>적용</div></div>
+	</div>
 	<div class="left">
 		<div id="expected">
 			<div class="title"><center> Expected</center> </div>
@@ -52,4 +68,12 @@
 		</ul>
 	</div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./datetime.js"></script>
+<script>
+	jQuery('#datetimepicker').datetimepicker({
+		format:'Y년 m월 d일 H시 i분'
+	});
+	jQuery.datetimepicker.setLocale('kr');
+</script>
 </html>

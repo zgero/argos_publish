@@ -94,16 +94,31 @@ body{
 	margin : 0;
 	padding : 0;
 	position:relative;
-	background-color:#2698BF;
-	color:#fff;
+	background-color:white;
+	color:#2698BF;
 	font-weight: bold;
 	font-size: 1.3em;
 	border-radius: 10px;
+	border-style: solid;
+	
+}
+.fix:hover{
+	background-color:#2698BF;
+	color:#fff;
+	border-style: solid;
+	border-color: #2698BF;
+	
 }
 .jo{
 	margin-top: 3%;
+	background-color:white;
+	color:#25BFBC;
+}
+button.jo:hover{
+	margin-top: 3%;
 	background-color:#25BFBC;
 	color:#fff;
+	border-color: #25BFBC;
 }
 	input {
 		position: relative;
