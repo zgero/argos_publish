@@ -63,27 +63,55 @@ html, body, div, span, applet, object, iframe,
 	height:100%;
 	z-index: 1000;
 	background:rgba(0,0,0,0.5);
-	display: block;
+	display: none;
 	text-align: center;
 	vertical-align: middle;
 }
-		.header{
+		.left_button{
 			border:none;
-			width: calc(100vw/4);
-			height: 12vh;
+			width: calc(100vw/3/2 - 3px);
+			height: 6vh;
 			margin : 0;
 			padding : 0;
-			top : .5vh;
 			position:relative;
-			position:fixed;
 			z-index:120; 
 			text-align: center;
 			color:white;
 			font-weight: bold;
 			font-size: 1.5em;
-			line-height: 12vh;
-			box-shadow: 0px 1px 3px #888888;
+			line-height: 6vh;
+			box-shadow: 0px 4px 3px #888888;
+			border: .2px solid #127597;
+			background: url(images/upload_c.png) no-repeat white;
+			background-size: 6.4vh 4vh;
+			background-position: center;
 		}
+		.left_button:hover{
+		background: url(images/upload.png) no-repeat #218DB7;
+			background-size: 6.4vh 4vh;
+			background-position: center;
+		}
+		.right_button{
+			float:right;
+			border:none;
+			width: calc(100vw/3/2 - 3px);
+			height: 6vh;
+			margin : 0;
+			padding : 0;
+			position:relative;
+			z-index:120; 
+			text-align: center;
+			color:white;
+			font-weight: bold;
+			font-size: 1em;
+			line-height: 6vh;
+			box-shadow: 0px 4px 3px #888888;
+			background: #253746;
+		}
+.right_button:hover{
+	background: #218DB7;
+}
+
 		.header div{
 			width: 50%;
 		}
@@ -95,13 +123,14 @@ html, body, div, span, applet, object, iframe,
 		}
 		.bottom_button{
 			border:none;
-			width: calc(100vw/4);
-			height: 10vh;
+			width: calc(100vw/3);
+			height: 6vh;
 			margin : 0 0 .5vh 0;
 			padding : 0;
-			bottom: 0;
+			bottom: .5vh;
 			position:fixed;
-			z-index:120; 
+			z-index:120;
+			
 			background-color:#253746;
 			color:#fff;
 			font-weight: bold;
@@ -167,7 +196,12 @@ ul {
 	width:100%;
 }
 .do div span {
-    width: calc(100vw/4);
+	margin : 0 1vw;
+	line-height : 4.4vh;
+}
+.do div.file_meta:hover{
+	filter:brightness(50%);
+	filter: invert(30%);
 }
 span {
 	position: relative;
@@ -187,7 +221,7 @@ li{
 	line-height: 20vh;
  	text-align: center;
 	width:calc(41vw/6);
-	height: 22vh;
+	height: 15vh;
 	color : white;
 	background:#5B5B5B;
 	border-right: 0.1vw #EEE;
@@ -200,9 +234,10 @@ second div{
 div#list {
 	float:left;
 	position: relative;
-	width : calc(73.5vw - 4px);
-	height: calc(99vh - 4px);
+	width : calc(65vw);
+	height: calc(95.5vh - 4px);
 	margin: .5vh 0;
+	z-index: 100;
 	box-sizing: border-box;
     box-shadow: 0px 0px 10px #999;
 	border-color: #2698BF;
@@ -224,20 +259,20 @@ ul li{
 	left : calc(100%/3);
 }
 .do{
-	width: calc(100vw/4);
-	height : calc(100% - 22vh);
-	top:11.5vh;
+	width: calc(100vw/3);
+	height : calc(100% - 6.5vh);
+	top:vh;
 	background: #ddd;
 	overflow-y: auto;
 }
 #upload{
 	position : relative;
 	float:left;
-	width : calc(100vw/4);
-	height : 99vh;
+	width : calc(100vw/3);
+	height : 95vh;
 	overflow-y: auto;
  	box-sizing: border-box;
-	margin:.5vw;
+	margin:.5vh .5vw;
     box-shadow: 0px 0px 10px #999;
 }
 #upload div div{
@@ -245,17 +280,16 @@ ul li{
 	position: relative;
 	background: #FFF;
 	margin-bottom: 1px;
-	width : calc(100vw/4);
-	height : calc(88vh/10);
+	width : calc(100vw/3);
+	height : calc(4.4vh);
 }
 .do div span:first-child {
 	font-weight: 600;
-	font-size : 1.5em;
-	margin-top: 2vh;
+	font-size : .9em;
 }
-.do div span:last-child {
+.do div span:last-of-type {
 	font-weight: 300;
-	font-size : 1.2em;
+	font-size : .7em;
 }
 
 .divide{
@@ -275,18 +309,17 @@ ul li{
 }
 #upload .do div:first-child {
 }
-#upload .do div.select {
+#upload .do div.select div.file_meta {
 	background:#2698BF;
 	color : white;
 }
 
-#upload .do div.have-select {
+#upload .do div.have-select div.file_meta{
 	background :#96BECC;
 	color : white;
 }
-#upload .do div.deact {
-	background:url(images/deact.png) repeat;
-	
+#upload .do div.deact div.file_meta{
+		background: #eee;
 }
 
 .datepick {
@@ -323,8 +356,8 @@ ul li:nth-child(1) {
 
 li div {
 	width:100%;
-	height:30%;
-	top:70%;
+	height:20%;
+	top :80%;
 	background: white;
 }
 li div.select {background:#2698BF;}
@@ -333,7 +366,7 @@ li div.select span {color : white;}
 ul li div span {
 	color: black;
 	font-weight: 600;
-	margin-top: -15vh;
+	margin-top: -17vh;
 }
 
 .mappick {
@@ -502,4 +535,57 @@ div.button div:hover{
 	height: 40px;
 	top: 20px;
 	right : 20px;
+}
+
+div#name {
+	position: relative;
+	float : left;
+	width: 99vw;
+	height: 2.5vh;
+	margin : .5vh 0.5vw;
+	background: #21303E;
+	color : #fff;
+	line-height: 2.5vh;
+	font-size : 1.2vh;
+	text-align: center;
+}
+
+#upload .do div div.file_edit {
+	position: relative;
+	border-left:.5px solid #ddd;
+	width:calc(4.4vh - .5px);
+	height:4.4vh;
+	background: url(images/edit.png) no-repeat white center;
+	background-size: 3vh;
+}
+#upload .do div.select div.file_edit{
+	background: url(images/edit_s.png) no-repeat white center;
+	background-size: 3vh;
+}
+#upload .do div.have-select div.file_edit{
+	background: url(images/edit_h.png) no-repeat white center;
+	background-size: 3vh;
+}
+
+div.file_edit:hover{
+	filter:brightness(50%);
+	filter: invert(30%);
+}
+
+
+div.file_meta {
+	position: relative;
+	float: left;
+	width : calc(100% - 4.4vh) !important;
+}
+
+#list ul li span{
+	font-size : .7em;
+}
+
+#list ul li:hover div{
+	background :#56BAE1;
+}
+#list ul li:hover div span{
+	color : white;
 }
