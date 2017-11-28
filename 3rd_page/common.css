@@ -38,6 +38,8 @@ body{
 	color: white;
 	background: #419FCC;
 	margin-bottom: .5vh;
+	border-radius: 4px;
+    box-shadow: 0px 2px 2px #999;
 }
 
 #previous:hover{
@@ -57,6 +59,7 @@ body{
 	width : 100%;
 	height : auto;
 	margin-top : 5%;
+	color : #333;
 }
 
 
@@ -77,6 +80,7 @@ div.datepick input {
 	position: fixed;
 	background: url(images/exit.png) no-repeat;
 	background-size: contain;
+	filter: brightness(70%);
 	width : 40px;
 	height: 40px;
 	top: 20px;
@@ -87,7 +91,7 @@ input {
 			margin: 0 5% 0 5%;
 			width : 75%;
 			border:0; 
-			padding:10;
+			padding:0px;
 			height:80px;
 			color:#4A4A4A;
 			font-size:0.875em;
@@ -102,19 +106,25 @@ input {
 	width:100%;
 	height:100%;
 	z-index: 1000;
-	background:rgba(0,0,0,0.5);
-	display: none;
+	background:rgba(0,0,0,0.6);
 	text-align: center;
 	vertical-align: middle;
 }
+#popup.on{
+	display:block;
+}
+#popup.off{
+	display: none;
+}
 #list{
+	z-index: 20;
 	position: relative;
 	float:left;
 	left : .5vw;
 	width :99vw;
 	height : 29vh;
 	background: white;
-    box-shadow: 0px 5px 10px #999;
+    box-shadow: 0px 0px 10px #999;
 	margin: 0 0 calc(1% / 3) 0;
 }
 .left{
@@ -153,6 +163,8 @@ ul {
 	height: calc(100% - 8vh);
 	overflow-y: auto;
 	padding-right: 17px;
+	background: white;
+	z-index: 10;
 }
 .do{
 	top:6%;
@@ -216,7 +228,8 @@ div#list ul li span:last-child {
 	width:30%;
 	height:60%;
 	top:15vh;
-	background: #FFFFFF
+	background: #FFFFFF;
+	box-shadow: 0px 0px 10px #666;
 }
 
 div.popup ul {
@@ -247,7 +260,7 @@ div.popup ul {
 	font-size: 100%;
 	font-weight: bold;
 	height : 40px;
-	line-height: 40px;
+	line-height: 50px;
 }
 
 .map {
@@ -263,10 +276,11 @@ div.button div {
 	float:left;
 	width : calc(45% - 4px);
 	height : calc(100% - 4px);
-	line-height: 50px;
+	line-height: 45px;
 	font-size: 150%;
 	font-weight: bold;
 	color:#2698BF;
+	border-radius: 4px;
 	border-color:#2698BF;
 	border-style: solid;
 	border-width: 2px;
@@ -295,7 +309,6 @@ div#left {
 	width : 25vw;
 	height: 66.5vh;
 	margin-left: .5vw;
-    box-shadow: 0px 5px 5px #999;
 	margin-bottom: .5vh;
 }
 
@@ -305,7 +318,7 @@ div#right {
 	width : 73.5vw;
 	height : 66.5vh;
 	left : .5vw;
-    box-shadow: 0px 5px 5px #999;
+    box-shadow: 0px 0px 10px #999;
 	margin-bottom: .5vh;
 }
 
@@ -381,6 +394,7 @@ div.title_list {
 }
 
 div.title_selected {
+	z-index: 5;
 	width :100%;
 	height :2.5vh;
 	text-align: center;
@@ -440,4 +454,53 @@ div.title_map {
 	background: url(images/check.png) no-repeat #242E38;
 	background-size :55%;
 	background-position: center;
+}
+
+div.alter-shadow {
+	position: fixed;
+	width : 25vw;
+	height: calc(66.5% - 8vh);
+    box-shadow: 0px 0px 10px #999;
+	bottom:30vh;
+	z-index: 0;
+}
+
+ul.popup {
+	z-index: 1001;
+	top:0;
+	padding-right: 17px !important;
+	overflow-y: auto;
+}
+
+ul.popup li {
+	float: left;
+	background: white;
+	border : .5px solid deepskyblue;
+	border-top-style: none;
+	width : calc(100% - 1px);
+	height: 30px;
+	margin: 0;
+	text-indent: 10px;
+	text-align: left;
+	line-height: 30px;
+	font-size : .8em;
+	color : #333;
+}
+
+ul.popup li:hover{
+	filter:brightness(90%);
+}
+
+div.ul-fit {
+	z-index: 1000;
+	position: fixed;
+	width : calc(22.5vw - .5px) !important;
+	height : auto !important;
+	max-height: 30vh !important;
+	top : calc(15vh + 3vw + 154px) !important;
+	left : calc(27.688px + 38vw) !important;
+	margin: 0;
+	padding: 0 0 0 0 !important;
+	overflow-y: hidden;
+	
 }
