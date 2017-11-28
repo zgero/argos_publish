@@ -221,7 +221,7 @@ li{
 	line-height: 20vh;
  	text-align: center;
 	width:calc(41vw/6);
-	height: 15vh;
+	height: 25vh;
 	color : white;
 	background:#5B5B5B;
 	border-right: 0.1vw #EEE;
@@ -260,8 +260,7 @@ ul li{
 }
 .do{
 	width: calc(100vw/3);
-	height : calc(100% - 6.5vh);
-	top:vh;
+	height : calc(100% - 9vh);
 	background: #ddd;
 	overflow-y: auto;
 }
@@ -588,4 +587,24 @@ div.file_meta {
 }
 #list ul li:hover div span{
 	color : white;
+}
+
+div.title_selected2 {
+	width :100%;
+	height :2.5vh;
+	text-align: center;
+	font-size: .8em;
+	color : white;
+	background: #2698BF;
+	line-height: 2.5vh;
+}
+
+div.title_selected {
+	width :100%;
+	height :2.5vh;
+	text-align: center;
+	font-size: .8em;
+	color : white;
+	background: #147394;
+	line-height: 2.5vh;
 }
