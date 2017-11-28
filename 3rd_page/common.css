@@ -127,7 +127,7 @@ input {
 }
 	
 div#list ul li {
-	width : 90%;
+	width : 100%;
 	height : 12%;
 	padding : 1% 1% 0 1%;
 	position: relative;
@@ -149,8 +149,10 @@ div#left ul li:nth-child(2n-1){
 }
 
 ul {
+	width : 25vw;
 	height: calc(100% - 8vh);
 	overflow-y: auto;
+	padding-right: 17px;
 }
 .do{
 	top:6%;
@@ -389,7 +391,7 @@ div.title_selected {
 }
 
 #left ul li {
-	width : 100%;
+	width : 25vw;
 	height: calc(100%/7);
 }
 
