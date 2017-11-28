@@ -382,7 +382,7 @@ ul li div span {
 	background: white;
 	top:14%;
 	width :30%;
-	height: 5%;
+	height: 5vh;
 	margin : auto;
 	padding-bottom: 10px;
 }
@@ -397,7 +397,7 @@ ul li div span {
 }
 div.title2 {
 	position: relative;
-	z-index: 0;
+	z-index: 5;
 	width : calc(73.5vw - 4px);
 	height : calc(10vh);
 	background: white;
@@ -515,7 +515,7 @@ div.button div {
 	float:left;
 	width : calc(45% - 4px);
 	height : calc(100% - 4px);
-	line-height: 50px;
+	line-height: 5vh;
 	font-size: 150%;
 	font-weight: bold;
 	color:#2698BF;
@@ -660,6 +660,6 @@ div.ul-fit {
 	left : calc(27.688px + 38vw) !important;
 	margin: 0;
 	padding: 0 0 0 0 !important;
-	overflow-y: hidden;
+	overflow-y: auto;
 	
 }
