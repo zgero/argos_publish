@@ -425,7 +425,8 @@ div.title_map {
 	margin : 4px 4px;
 	height: 90%;
 	background: url(images/8_0.jpg) no-repeat;
-	background-size : cover;
+	background-size : contain;
+	background-position: center;
 }
 
 #left ul li span {
